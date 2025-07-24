@@ -1,7 +1,7 @@
 {{ "<!-- head.html -->" | safeHTML -}}
 {{ if or .Params.headless .Params.target .Params.alias -}}
     {{- $url := "404.html" | absURL }}
-    {{- with or .Params.Target .Params.Alias }}
+    {{- with or .Params.target .Params.Alias }}
         {{- $url = . }}
     {{- end }}
     <title>{{ $url }}</title>
